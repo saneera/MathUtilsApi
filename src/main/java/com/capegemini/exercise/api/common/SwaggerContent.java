@@ -11,12 +11,12 @@ package com.capegemini.exercise.api.common;
 public interface SwaggerContent {
 
 	interface OPERATION {
-		String TAG = "FindTheSqureRootOfSumoftheSquresOfHighestThreeNumber";
+		String TAG = "calculate";
 
 		interface Get {
-			String ID = "findTheSqureRootOfSumoftheSquresOfHighestThreeNumber";
-			String DESCRIPTION = "find the squre root of sum of the squres of highest three number";
-			String NOTE = "FindTheSqureRootOfSumoftheSquresOfHighestThreeNumber";
+			String ID = "calculate";
+			String DESCRIPTION = "calculate based on the exercice";
+			String NOTE = "calculate";
 		}
 	}
 	
