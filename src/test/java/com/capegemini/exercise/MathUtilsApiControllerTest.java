@@ -52,7 +52,7 @@ public class MathUtilsApiControllerTest  {
 	}
 	
 	private String getApiOperationPath() {
-		return Path.PATH_SQUREROOT_OF_SUM_OF_THE_HEIGHEST_THREE_NUMBERS_AND_SUM_OF_SQURE;
+		return Path.PATH_CALCULATION;
 	}
 
 	
