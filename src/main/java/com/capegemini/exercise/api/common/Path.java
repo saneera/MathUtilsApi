@@ -17,7 +17,7 @@ public interface Path {
 	/**
 	 *find the squre root of sum of the squres of highest three number
 	 */
-	String PATH_SQUREROOT_OF_SUM_OF_THE_HEIGHEST_THREE_NUMBERS_AND_SUM_OF_SQURE = PATH_VERSION + "/findTheSqureRootOfSumoftheSquresOfHighestThreeNumber";
+	String PATH_CALCULATION = PATH_VERSION + "/calculate";
 	
 	
 }

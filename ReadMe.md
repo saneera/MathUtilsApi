@@ -1,6 +1,5 @@
 # MathUtilApi
 
-### Reference Documentation
  A REST/JSON web API in Java 8+ that accepts an array of numeric inputs and performs the following:
 
 1) Finds the highest 3 numbers
@@ -18,7 +17,7 @@ http://localhost:8080/v1/findTheSqureRootOfSumoftheSquresOfHighestThreeNumber
  
 ```
 curl -X POST \
-  http://localhost:8080/v1/findTheSqureRootOfSumoftheSquresOfHighestThreeNumber \
+  http://localhost:8080/v1/calculate \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
   -d '{
@@ -32,7 +31,7 @@ curl -X POST \
 
 ```
 curl -X POST \
-  http://localhost:8080/v1/findTheSqureRootOfSumoftheSquresOfHighestThreeNumber \
+  http://localhost:8080/v1/calculate \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
   -d '{
@@ -43,7 +42,7 @@ curl -X POST \
 
 ```
 curl -X POST \
-  http://localhost:8080/v1/findTheSqureRootOfSumoftheSquresOfHighestThreeNumber \
+  http://localhost:8080/v1/calculate \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
   -d '{
@@ -53,7 +52,7 @@ curl -X POST \
 
 ```
 curl -X POST \
-  http://localhost:8080/v1/findTheSqureRootOfSumoftheSquresOfHighestThreeNumber \
+  http://localhost:8080/v1/calculate \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
   -d '{
