@@ -8,13 +8,14 @@
 
 
 
+
 End point
 http://localhost:8080/v1/calculate
 
 # Test cases
 
 ### Pass test cases
- calculate 
+  
 ```
 curl -X POST \
   http://localhost:8080/v1/calculate \
@@ -22,6 +23,17 @@ curl -X POST \
   -H 'content-type: application/json' \
   -d '{
 	"data": [5,4,6,1]
+}
+'
+```
+
+```
+curl -X POST \
+  http://localhost:8080/v1/calculate \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -d '{
+	"data": [5,4,6,1,8]
 }
 '
 ```
