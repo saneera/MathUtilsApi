@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.capegemini</groupId>
 	<artifactId>MathUtilsApi</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>MathUtilsApi</name>
 	<description>MathUtil Api</description>
 
@@ -70,7 +70,7 @@
 
 	<build>
 		<plugins>
-			<plugin>
+		<!-- 	<plugin>
 				<groupId>org.asciidoctor</groupId>
 				<artifactId>asciidoctor-maven-plugin</artifactId>
 				<version>1.5.3</version>
@@ -82,12 +82,14 @@
 							<goal>process-asciidoc</goal>
 						</goals>
 						<configuration>
+						    <sourceDirectory>src/main/doc</sourceDirectory>
+     						<outputDirectory>target/docs</outputDirectory>
 							<backend>html</backend>
 							<doctype>book</doctype>
 						</configuration>
 					</execution>
 				</executions>			
-			</plugin>
+			</plugin> -->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>

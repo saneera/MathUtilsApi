@@ -7,7 +7,7 @@
 2) Computes the square root of the sum of squares of the 3 highest numeric inputs. The following is an example input:
 
 
-Run Application
+Run Application using eclipse
 
 1) clone or download the project
 
@@ -16,6 +16,12 @@ Run Application
 3) convert to maven project 
 
 4) run MathUtilsApiApplication.java 
+
+
+Run Application using Maven
+
+1) ./mvnw package && java -jar target/MathUtilsApi-1.0.0.jar
+
 
 #### End point
 http://localhost:8080/v1/calculate
