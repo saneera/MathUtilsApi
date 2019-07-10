@@ -51,6 +51,23 @@ public class MathUtilsApiControllerTest  {
 				.andExpect(content().json(expectedResponse));
 	}
 	
+	@Test
+	public void testInvalidInput1() throws Exception {
+		String request = JsonHelper.get(RESOURCE_CATEGORY, RESPONSE_CATEGORY_4XX, "invalid-request1.json");
+		String expectedResponse = JsonHelper.get(RESOURCE_CATEGORY, RESPONSE_CATEGORY_4XX, "invalid-response1.json");
+		this.mvc.perform(post(getApiOperationPath()).accept(MediaType.APPLICATION_JSON).content(request).contentType(MediaType.APPLICATION_JSON)).andExpect(status().isBadRequest())
+				.andExpect(content().json(expectedResponse));
+	}
+	
+	@Test
+	public void testInvalidInput2() throws Exception {
+		String request = JsonHelper.get(RESOURCE_CATEGORY, RESPONSE_CATEGORY_4XX, "invalid-request2.json");
+		String expectedResponse = JsonHelper.get(RESOURCE_CATEGORY, RESPONSE_CATEGORY_4XX, "invalid-response2.json");
+		this.mvc.perform(post(getApiOperationPath()).accept(MediaType.APPLICATION_JSON).content(request).contentType(MediaType.APPLICATION_JSON)).andExpect(status().isBadRequest())
+				.andExpect(content().json(expectedResponse));
+	}
+	
+	
 	private String getApiOperationPath() {
 		return Path.PATH_CALCULATION;
 	}
