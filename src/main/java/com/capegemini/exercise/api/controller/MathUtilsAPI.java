@@ -19,7 +19,7 @@ public interface MathUtilsAPI {
 	
 	/**
 	 * @param RequestModel contains int array to do the operation	
-	 * @return an Result
+	 * @return an ResponseModel
 	 * @throws ApiException
 	 */
 	@RequestMapping(

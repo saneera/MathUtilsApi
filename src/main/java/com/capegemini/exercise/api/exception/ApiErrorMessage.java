@@ -9,7 +9,7 @@ import lombok.Getter;
 import lombok.ToString;
 
 /**
- * ApiErrorMessage is used to convert the excptions to an error message in {@link com.capegemini.api.exception.RestExceptionHandler}
+ * ApiErrorMessage is used to convert the exceptions to an error message in {@link com.capegemini.api.exception.RestExceptionHandler}
  * @author Saneera Yapa
  *
  */

@@ -12,6 +12,7 @@ import com.capegemini.exercise.api.controller.MathUtilsAPI;
 import com.capegemini.exercise.api.exception.ApiException;
 import com.capegemini.exercise.api.model.RequestModel;
 import com.capegemini.exercise.api.model.ResponseModel;
+import com.capegemini.exercise.api.util.ExceptionHelper;
 import com.capegemini.exercise.api.validator.RequestValidator;
 
 import lombok.extern.slf4j.Slf4j;
@@ -21,22 +22,34 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class MathUtilsApiController implements MathUtilsAPI {
 
+	
 	@Override
 	public ResponseEntity<ResponseModel> findTheSqureRootOfSumoftheSquresOfHighestThreeNumber(RequestModel input) throws ApiException {		
-		RequestValidator.validateNotNull(input, "data");	
-		RequestValidator.validateNotNull(input.getData(), RequestModel.ATTRIBUTE_NAME_DATA);
-		RequestValidator.validateLength(input.getData(), RequestModel.ATTRIBUTE_NAME_DATA);		
-		ResponseModel result = new ResponseModel();
-		
-		double calculatedValue = calculateSqureRootOfSumoftheSquresOfHighestThreeNumber(input);		
-		BigDecimal bd = new BigDecimal(calculatedValue).setScale(2, RoundingMode.HALF_UP);
-        double output = bd.doubleValue();        
-		result.setOutput(output);
-		return new ResponseEntity<ResponseModel>(result, HttpStatus.OK);			
+	
+		try {
+			RequestValidator.validateNotNull(input, "data");	
+			RequestValidator.validateNotNull(input.getData(), RequestModel.ATTRIBUTE_NAME_DATA);
+			RequestValidator.validateLength(input.getData(), RequestModel.ATTRIBUTE_NAME_DATA);		
+			return new ResponseEntity<ResponseModel>(calculateSqureRootOfSumoftheSquresOfHighestThreeNumber(input), HttpStatus.OK);			
+		} catch (RuntimeException e) {
+			log.error("exception while calculating" + e, e);
+			throw ExceptionHelper.getApiException(e.getMessage());
+		}
+				
 	}
 
-	private double calculateSqureRootOfSumoftheSquresOfHighestThreeNumber(RequestModel input) {
-		return Math.sqrt(Arrays.stream(input.getData()).sorted().skip(input.getData().length-3).mapToLong(i -> i*i).sum());
+	
+	/**
+	 * This method compute the square root of the sum of squares of the 3 highest numeric inputs
+	 * @param RequestModel contains int array to do the operation	
+	 * @return an ResponseModel
+	 */
+	private ResponseModel calculateSqureRootOfSumoftheSquresOfHighestThreeNumber(RequestModel input) {
+		ResponseModel result = new ResponseModel();
+		double calculatedValue = Math.sqrt(Arrays.stream(input.getData()).sorted().skip(input.getData().length-3).mapToLong(i -> i*i).sum());
+		BigDecimal bd = new BigDecimal(calculatedValue).setScale(2, RoundingMode.HALF_UP);
+        result.setOutput(bd.doubleValue());        
+		return result;
 	}
 	
 	
