@@ -1,0 +1,5 @@
+{
+    "code": "MUEC0003",
+    "title": "Invalid input(s)",
+    "message": "input [data] is invalid. reason: [array length should be 3 or more]"
+}
