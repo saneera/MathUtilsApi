@@ -1,10 +1,13 @@
 # MathUtilApi
 
 ### Reference Documentation
-This is an exercise for 
-Import this as a Maven project, run in a Servlet Container like Tomcat(TM) 
+ A REST/JSON web API in Java 8+ that accepts an array of numeric inputs and performs the following:
 
-how its working
+1) Finds the highest 3 numbers
+
+2) Computes the square root of the sum of squares of the 3 highest numeric inputs. The following is an example input:
+
+
 
 End point
 http://localhost:8080/v1/findTheSqureRootOfSumoftheSquresOfHighestThreeNumber
