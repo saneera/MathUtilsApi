@@ -12,6 +12,13 @@
 End point
 http://localhost:8080/v1/calculate
 
+swagger-ui
+
+http://localhost:8080/swagger-ui.html
+
+![](swagger-ui.png)
+
+
 # Test cases
 
 ### Pass test cases
