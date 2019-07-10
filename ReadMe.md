@@ -7,19 +7,27 @@
 2) Computes the square root of the sum of squares of the 3 highest numeric inputs. The following is an example input:
 
 
+Run Application
 
+1) clone or download the project
 
-End point
+2) open project eclipse IDE 
+
+3) convert to maven project 
+
+4) run MathUtilsApiApplication.java 
+
+#### End point
 http://localhost:8080/v1/calculate
 
-swagger-ui
+#### swagger-ui
 
 http://localhost:8080/swagger-ui.html
 
 ![](swagger-ui.png)
 
 
-# Test cases
+### Test cases
 
 ### Pass test cases
   
