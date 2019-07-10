@@ -9,12 +9,12 @@
 
 
 End point
-http://localhost:8080/v1/findTheSqureRootOfSumoftheSquresOfHighestThreeNumber
+http://localhost:8080/v1/calculate
 
 # Test cases
 
 ### Pass test cases
- 
+ calculate 
 ```
 curl -X POST \
   http://localhost:8080/v1/calculate \
