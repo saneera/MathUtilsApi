@@ -6,7 +6,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-@SpringBootApplication(scanBasePackages = "com.capegemini.exercise")
+@SpringBootApplication(scanBasePackages = "com.capegemini.exercise.api")
 @EnableSwagger2
 public class MathUtilsApiApplication {
 
